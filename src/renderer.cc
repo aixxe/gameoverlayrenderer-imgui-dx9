@@ -42,8 +42,8 @@ FORCEINLINE void hooks::draw_interface() {
 
 void STDMETHODCALLTYPE gameoverlayrenderer_imgui_dx9_init() {
 	// Perform signature scans inside the 'gameoverlayrenderer.dll' library.
-	std::uintptr_t present_addr = FindPattern("gameoverlayrenderer.dll", "FF 15 ? ? ? ? 8B F8 85 DB 74 1F") + 2;
-	std::uintptr_t reset_addr = FindPattern("gameoverlayrenderer.dll", "FF 15 ? ? ? ? 8B F8 85 FF 78 18") + 2;
+	std::uintptr_t present_addr = FindPattern("gameoverlayrenderer.dll", "FF 15 ? ? ? ? 8B F8 85 DB") + 2;
+	std::uintptr_t reset_addr = FindPattern("gameoverlayrenderer.dll", "C7 45 ? ? ? ? ? FF 15 ? ? ? ? 8B F8") + 9;
 
 	// Store the original contents of the pointers for later usage.
 	hooks::original_present = **reinterpret_cast<decltype(&hooks::original_present)*>(present_addr);

@@ -4,7 +4,7 @@ Example project demonstrating [ImGui](https://github.com/ocornut/imgui) renderin
 
 See the [blog post here](https://aixxe.net/2017/09/steam-overlay-rendering) for more details.
 
-![ImGui window not visible in recording software](https://cdn.aixxe.net/projects/gameoverlayrenderer-imgui-dx9/cstrike_obs_demo.jpg)
+![ImGui window not visible in recording software](assets/images/cstrike_obs_demo.jpg)
 
 # Usage
 
